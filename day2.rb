@@ -22,15 +22,19 @@ def ribbon(array)
   return ribbon
 end
 
-wrapping_paper = 0
-ribbon = 0
+def all_together_now(csv_file)
+  wrapping_paper = 0
+  ribbon = 0
 
-CSV.foreach("inputs/day2input.csv") do |row|
-  row_array = row[0].split("x")
-  row_array.map! { |a| a.to_i }
-  wrapping_paper += wrapping_paper(row_array)
-  ribbon += ribbon(row_array)
+  CSV.foreach(csv_file) do |row|
+    row_array = row[0].split("x")
+    row_array.map! { |a| a.to_i }
+    wrapping_paper += wrapping_paper(row_array)
+    ribbon += ribbon(row_array)
+  end
+
+  puts wrapping_paper
+  puts ribbon
 end
 
-puts wrapping_paper
-puts ribbon
+all_together_now("inputs/day2input.csv")

@@ -4,9 +4,10 @@ def houses(instructions)
   array = instructions[0][0].split(//)
 
   visited = [[0,0]]
+  # Santa's starting coordinates
   s_x = 0
   s_y = 0
-
+  # Robo-Santa's starting coordiantes
   r_x = 0
   r_y = 0
 
