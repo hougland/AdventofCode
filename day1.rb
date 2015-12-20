@@ -20,8 +20,6 @@ def santa_floors(instructions)
   puts position
 end
 
-data = CSV.read("day1input.csv")
+data = CSV.read("inputs/day1input.csv")
 
 santa_floors(data)
-
-# answer is not position = 1796

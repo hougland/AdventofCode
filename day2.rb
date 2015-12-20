@@ -25,7 +25,7 @@ end
 wrapping_paper = 0
 ribbon = 0
 
-CSV.foreach("day2input.csv") do |row|
+CSV.foreach("inputs/day2input.csv") do |row|
   row_array = row[0].split("x")
   row_array.map! { |a| a.to_i }
   wrapping_paper += wrapping_paper(row_array)
