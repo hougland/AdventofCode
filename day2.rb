@@ -23,18 +23,18 @@ def ribbon(array)
 end
 
 def all_together_now(csv_file)
-  wrapping_paper = 0
-  ribbon = 0
+  wrapping_paper_total = 0
+  ribbon_total = 0
 
   CSV.foreach(csv_file) do |row|
     row_array = row[0].split("x")
     row_array.map! { |a| a.to_i }
-    wrapping_paper += wrapping_paper(row_array)
-    ribbon += ribbon(row_array)
+    wrapping_paper_total += wrapping_paper(row_array)
+    ribbon_total += ribbon(row_array)
   end
 
-  puts wrapping_paper
-  puts ribbon
+  puts wrapping_paper_total
+  puts ribbon_total
 end
 
 all_together_now("inputs/day2input.csv")
